@@ -1,13 +1,10 @@
-﻿int hour;
-int minute;  
-
-try
+﻿try
 {
     Console.WriteLine("Enter hour: ");
-    hour = Convert.ToInt32(Console.ReadLine());
+    int hour = Convert.ToInt32(Console.ReadLine());
 
     Console.WriteLine("Enter minute: ");
-    minute = Convert.ToInt32(Console.ReadLine());
+    int minute = Convert.ToInt32(Console.ReadLine());
 
     Console.WriteLine($"Angle between {hour} and {minute} is {ClockLesserAngleCalculator.Calculate(hour, minute)} degrees");
 
