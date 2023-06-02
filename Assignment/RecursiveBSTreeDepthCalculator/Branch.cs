@@ -6,6 +6,9 @@
 
         public int Node { get; set; }
 
+        /// <summary>
+        /// Gets or sets the left branch.
+        /// </summary>
         public Branch? Left
         {
             get
@@ -32,6 +35,9 @@
             }
         }
 
+        /// <summary>
+        /// Gets or sets the right branch.
+        /// </summary>
         public Branch? Right
         {
             get

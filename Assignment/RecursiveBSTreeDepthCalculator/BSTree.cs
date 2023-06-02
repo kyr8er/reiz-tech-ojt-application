@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RecursiveBSTreeDepthCalculator
+﻿namespace RecursiveBSTreeDepthCalculator
 {
     internal class BSTree
     {
@@ -20,11 +14,20 @@ namespace RecursiveBSTreeDepthCalculator
             Root = new Branch(rootVal);
         }
 
+        /// <summary>
+        /// Adds a node to the tree.
+        /// </summary>
+        /// <param name="node">The node to add.</param>
         public void Add(int node)
         {
             Add(node, Root);
         }
 
+        /// <summary>
+        /// The private recursive add method.
+        /// </summary>
+        /// <param name="node">The node to add.</param>
+        /// <param name="branch">The children branches.</param>
         private void Add(int node, Branch branch)
         {
             if (node < branch.Node)
@@ -51,11 +54,20 @@ namespace RecursiveBSTreeDepthCalculator
             }
         }
 
+        /// <summary>
+        /// Gets the depth of the tree.
+        /// </summary>
+        /// <returns>Depth of the tree as an integer.</returns>
         public int GetDepth()
         {
             return GetDepth(Root);
         }
 
+        /// <summary>
+        /// The private recursive get depth method for each children branch.
+        /// </summary>
+        /// <param name="branch">The branch to get depth from.</param>
+        /// <returns></returns>
         private int GetDepth(Branch branch)
         {
             if (branch == null)
@@ -68,11 +80,18 @@ namespace RecursiveBSTreeDepthCalculator
             }
         }
 
+        /// <summary>
+        /// Prints the tree in-order traversal.
+        /// </summary>
         public void PrintInOrder()
         {
             PrintInOrder(Root);
         }
 
+        /// <summary>
+        /// The private recursive print in-order method.
+        /// </summary>
+        /// <param name="branch">The branch to print from.</param>
         private void PrintInOrder(Branch branch)
         {
             if (branch != null)
