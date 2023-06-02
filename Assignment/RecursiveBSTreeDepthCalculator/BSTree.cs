@@ -68,28 +68,19 @@ namespace RecursiveBSTreeDepthCalculator
             }
         }
 
-        public void PrintTree()
+        public void PrintInOrder()
         {
-            PrintTree(Root, 0);
+            PrintInOrder(Root);
         }
 
-        private void PrintTree(Branch branch, int level)
+        private void PrintInOrder(Branch branch)
         {
-            if (branch == null)
+            if (branch != null)
             {
-                return;
+                PrintInOrder(branch.Left);
+                Console.Write(branch.Node + ", ");
+                PrintInOrder(branch.Right);
             }
-
-            PrintTree(branch.Right!, level + 1);
-
-            for (int i = 0; i < level; i++)
-            {
-                Console.Write("    ");
-            }
-
-            Console.WriteLine(branch.Node);
-
-            PrintTree(branch.Left!, level + 1);
         }
 
     }

@@ -29,7 +29,7 @@
             }
 
             Console.WriteLine($"Depth: {tree.GetDepth()}");
-            tree.PrintTree();
+            tree.PrintInOrder();
         }
     }
 }
