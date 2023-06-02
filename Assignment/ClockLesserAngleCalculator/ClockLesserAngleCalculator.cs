@@ -1,5 +1,15 @@
-﻿internal class ClockLesserAngleCalculator
+﻿/// <summary>
+/// Calculates the lesser angle between the hour and minute hands of a clock.
+/// </summary>
+internal class ClockLesserAngleCalculator
 {
+    /// <summary>
+    /// Calculates the lesser angle between the hour and minute hands of a clock.
+    /// </summary>
+    /// <param name="hour">The hour to input.</param>
+    /// <param name="minute">The minute to input.</param>
+    /// <returns>The degree of the lesser angle as an integer data type.</returns>
+    /// <exception cref="ArgumentException"></exception>
     public static int Calculate(int hour, int minute)
     {
         int angle;
